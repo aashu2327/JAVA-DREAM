@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class student
+{
+  String d;
+  int a,b,c;
+  String coll="SIT";
+  student (String name,int m1,int m2,int m3){
+    d=name;
+    a=m1;
+    b=m2;
+    c=m3;
+  }
+  public void display(){
+    
+    System.out.println("Mr "+d+" has scored "+(a+b+c)+coll);
+  }
+}
+
+public class Main {
+    public static void main(String[] args) {
+      int m1,m2,m3;
+      String name;
+      Scanner a=new Scanner(System.in);
+      System.out.println("enter the number: ");
+      int n=a.nextInt();
+      student[] sc= new student[n];
+      for(int i=0;i<n;i++)
+      {
+        System.out.println("Enter Details: " );
+        name=a.nextLine();
+        m1=a.nextInt();
+       
+        m2=a.nextInt();
+       
+        m3=a.nextInt();
+        sc[i]=new student(name,m1,m2,m3);
+      }
+     
+      for (int i=0;i<n;i++)
+      {
+        
+        sc[i].display();
+      }
+        
+    }
+}
