@@ -1,0 +1,74 @@
+import java.util.*;
+
+class Common {
+    static String PM = "Modi";
+}
+
+class TN {
+    static String CM = "Vijay";
+    static String state = "TN";
+
+    String dist;
+    int pop;
+
+    public void set_dim(String a, int b) {
+        dist = a;
+        pop = b;
+    }
+
+    public void display() {
+        System.out.println("DISTRICT : " + dist);
+        System.out.println("POPULATION : " + pop);
+        System.out.println("CM :" + CM);
+        System.out.println("STATE :" + state);
+        System.out.println("PM :" + Common.PM);
+    }
+}
+
+class AP {
+    static String CM = "Ram";
+    static String state = "AP";
+
+    String dist;
+    int pop;
+
+    public void set_dim(String a, int b) {
+        dist = a;
+        pop = b;
+    }
+
+    public void display() {
+        System.out.println("DISTRICT :" + dist);
+        System.out.println("POPULATION : " + pop);
+        System.out.println("CM : " + CM);
+        System.out.println("STATE :  " + state);
+        System.out.println("PM : " + Common.PM);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TN a = new TN();
+        TN b = new TN();
+
+        AP ap1 = new AP();
+        AP b1 = new AP();
+        AP c1 = new AP();
+
+        a.set_dim("Chennai", 1000);
+        b.set_dim("Vellore", 1001);
+
+        ap1.set_dim("Tirupati", 1002);
+        b1.set_dim("Guntur", 1003);
+        c1.set_dim("Chittoor", 1004);
+
+        a.display();
+        b.display();
+
+        System.out.println("- - - - - - - - -- - - - - - - - - - -- - ");
+
+        ap1.display();
+        b1.display();
+        c1.display();
+    }
+}
