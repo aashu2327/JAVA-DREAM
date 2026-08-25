@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+  public static int san (int a ,int b)
+{
+  int big=Math.max(a,b);
+  int small=Math.min(a,b);
+  int s=big;
+  while(true)
+  {
+    if(big%small==0)
+    break;
+    big=big+s;
+  }
+  return big;
+}
+
+ 
+public static void main(String[] args)
+    {
+     int[]a={2,6,4,9,3,8};
+     int lcm=a[0];
+     for(int i=0;i<6;i++)
+     {
+      lcm=san(lcm,a[i]);
+     } 
+     System.out.print("The LCM is"+lcm);
+    }
+}
