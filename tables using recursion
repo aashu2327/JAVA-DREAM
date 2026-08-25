@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{ 
+
+  public static void table (int a , int b)
+  {
+    if(b==13)
+    return;
+    System.out.println(a+"*"+b+"="+(a*b));
+    table(a,(b+1));
+  }
+
+  public static void main(String[] args)
+  {
+    table(8,1);
+  }
+}
